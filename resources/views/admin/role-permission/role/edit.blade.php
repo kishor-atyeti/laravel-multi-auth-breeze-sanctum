@@ -6,7 +6,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-8">
-                        <h1>Permission: Edit</h1>
+                        <h1>Role: Edit</h1>
                     </div>
                     <div class="col-sm-4 text-right">
 
@@ -23,7 +23,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Permission: {{ $permission->name }}</h3>
+                                <h3 class="card-title">Role: {{ $role->name }}</h3>
 
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
@@ -40,14 +40,14 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <form action="{{ route('admin.permissions.update', $permission->id) }}" method="post">
+                                <form action="{{ route('admin.roles.update', $role->id) }}" method="post">
                                     @csrf
                                     @method('PUT')
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="name">Permission Name</label>
-                                                <input type="text" class="form-control" name="name" id="name" value="{{ $permission->name }}"
+                                                <label for="name">Role Name</label>
+                                                <input type="text" class="form-control" name="name" id="name" value="{{ $role->name }}"
                                                     required />
                                             </div>
 

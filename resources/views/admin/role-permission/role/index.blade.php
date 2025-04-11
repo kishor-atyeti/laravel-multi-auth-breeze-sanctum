@@ -6,7 +6,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-8">
-                        <h1>Roles</h1>
+                        <h1>Role</h1>
                     </div>
                     <div class="col-sm-4 text-right">
                         <a href="{{ url('admin/roles/create') }}" class="btn btn-primary btn-md">Create</a>

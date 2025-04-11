@@ -27,8 +27,6 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
         return view('admin.dashboard');
     })->middleware(['verified'])->name('admin.dashboard');
 
-    // Route::resource('permissions', PermissionController::class);
-
     // Permissions
     Route::get('permissions', [PermissionController::class, 'index'])->name('admin.permissions.index');
     Route::get('permissions/create', [PermissionController::class, 'create'])->name('admin.permissions.create');
