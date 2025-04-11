@@ -37,17 +37,27 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
                 <li class="nav-item">
-                    <a href=href={{ route("admin.dashboard")}} class="nav-link">
-                        <i class="nav-icon far fa-calendar-alt"></i>
+                    <a href="{{ route("admin.dashboard")}}" class="nav-link">
+                        <i class="nav-icon far fa-list-alt"></i>
                         <p>Dashbord</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../gallery.html" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
-                        <p>
-                            Gallery
-                        </p>
+                    <a href="{{ route('admin.roles.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-user-shield"></i>
+                        <p>Role</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.permissions.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-cogs"></i>
+                        <p>Permission</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.administrator.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-user-astronaut"></i>
+                        <p>Administrator</p>
                     </a>
                 </li>
             </ul>
