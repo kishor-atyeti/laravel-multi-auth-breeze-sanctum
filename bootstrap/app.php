@@ -18,7 +18,10 @@ return Application::configure(basePath: dirname(__DIR__))
         //
         $middleware->alias([
             'guest' => RedirectIfAuthenticated::class,
-            'auth' => Authenticate::class
+            'auth' => Authenticate::class,
+            'role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
+            'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
+            'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

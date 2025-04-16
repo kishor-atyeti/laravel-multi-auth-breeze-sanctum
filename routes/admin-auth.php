@@ -38,7 +38,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
 
     // Roles
     Route::get('roles', [RoleController::class, 'index'])->name('admin.roles.index');
-    Route::get('roles/create', [RoleController::class, 'create'])->name('admin.roles.create');
+    Route::get('roles/create', [RoleController::class, 'create'])->name('admin.roles.create')->middleware('permission:Role: Create');
     Route::post('roles', [RoleController::class, 'store'])->name('admin.roles.store');
     Route::get('roles/{role}', [RoleController::class, 'show'])->name('admin.roles.show');
     Route::get('roles/{role}/edit', [RoleController::class, 'edit'])->name('admin.roles.edit');
